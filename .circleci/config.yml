@@ -14,9 +14,7 @@ jobs:
       - checkout
       - python/install-packages:
           pkg-manager: pip
-      - run:
-          name: Install Dependencies
-          command: pip install -r requirements.txt
+      - run: pip install pytest requests
       - run:
           name: Run tests
           command: python -m pytest
